@@ -1,0 +1,120 @@
+[
+  {
+    "id": 0,
+    "productName": "Dog Joy Treats",
+    "imageFront": "🐶",
+    "imageBack": "./imgs/dog-joy-back.webp",
+    "type": "Carnivore",
+    "ingredients": [
+      "Chicken",
+      "Ground Oats",
+      "Chicken Broth",
+      "Salt",
+      "Natural Flavors",
+      "Vinegar"
+    ],
+
+    "quantity": "8",
+    "price": "12.50",
+    "description": "These bite-size treats made of real chicken have that authentic barbecue smell and taste — making this a great, yummy way to reward your pup. Made in the USA.",
+    "metEng": "2050",
+    "crudeP": "10.50",
+    "crudeFa": "10.00",
+    "crudeFi": "8.15",
+    "moisture": "5.00"
+  },
+  {
+    "id": 1,
+    "productName": "Turkey Bacon Treats",
+    "imageFront": "🐶",
+    "imageBack": "./imgs/turkey-joy-back.webp",
+    "type": "Carnivore",
+    "ingredients": [
+      "Turkey",
+      "Water",
+      "Pea Fiber",
+      "Salt",
+      "Potassium Chloride",
+      "Celery Powder"
+    ],
+
+    "quantity": "8",
+    "price": "7.50",
+    "description": "Smoked to perfection, these natural turkey bacon treats are an absolute favorite of pups everywhere. Made in the USA.",
+    "metEng": "3020",
+    "crudeP": "5.50",
+    "crudeFa": "11.00",
+    "crudeFi": "9.15",
+    "moisture": "7.00"
+  },
+  {
+    "id": 2,
+    "productName": "Tender Bites",
+    "imageFront": "🐈",
+    "imageBack": "./imgs/tender-bitesback.webp",
+    "type": "Mix",
+    "ingredients": [
+      "Chicken",
+      "Chicken Liver",
+      "Eggs",
+      "Carrots",
+      "Natural Flavors",
+      "Vinegar",
+      "Spinach",
+      "Salt",
+      "Beta-Carotene",
+      "Fish"
+    ],
+
+    "quantity": "16",
+    "price": "20.00",
+    "description": "Tender bites of fresh chicken accented with crisp carrots and leafy spinach, this recipe will have your cat purring. Comes in a convenient, resealable bag to make serving quick and easy.",
+    "metEng": "2000",
+    "crudeP": "10.50",
+    "crudeFa": "10.00",
+    "crudeFi": "9.15",
+    "moisture": "5.00"
+  },
+  {
+    "id": 3,
+    "productName": "Rabbit Food",
+    "imageFront": "🐇",
+    "imageBack": "./imgs/dog-joy-back.webp",
+    "type": "Vegan",
+    "ingredients": ["lettuce", "Carrots", "Spinach", "Water"],
+
+    "quantity": "8",
+    "price": "9.00",
+    "description": "A balanced diet for your bunny. To keep it healthy and happy. Made in the USA.",
+    "metEng": "1700",
+    "crudeP": "6.50",
+    "crudeFa": "10.00",
+    "crudeFi": "8.15",
+    "moisture": "5.00"
+  },
+  {
+    "id": 4,
+    "productName": "Veggie Birdie",
+    "imageFront": "🦜",
+
+    "type": "Vegeterian",
+    "ingredients": [
+      "Milk",
+      "Cheese",
+      "Bread",
+      "Salt",
+      "Water",
+      "Celery Powder",
+      "Baby Carrots"
+    ],
+
+    "quantity": "8",
+    "price": "6.50",
+    "description": "A tasy mixture of all the best greens and a pinch of milk and cheese for your flying friend. Made in the USA.",
+    "metEng": "2050",
+    "crudeP": "10.5",
+    "crudeFa": "7.10",
+    "crudeFi": "9.00",
+    "moisture": "8.10"
+  }
+]

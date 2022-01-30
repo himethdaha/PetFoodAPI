@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%productName%}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https: //fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap "
+      rel=" stylesheet "
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(to bottom right, #88ca4e, #07d6a6);
+        min-height: 100vh;
+        color: #555;
+      }
+      .container {
+        width: 100rem;
+        margin: 0 auto;
+      }
+      .product-card {
+        width: 50rem;
+        margin: 0 auto;
+        margin-top: 10rem;
+        box-shadow: 0rem 3rem 10rem 2rem rgba(0, 0, 0, 0.199);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background: #fff;
+        margin-bottom: 2rem;
+      }
+      .header {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        margin-top: 8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: 600;
+        transform: skewY(-5deg);
+        position: relative;
+        font-family: "Rubik Beastly", cursive;
+      }
+      .header::before {
+        display: block;
+        content: "";
+        background: linear-gradient(to bottom, #58a566, #09b990);
+        height: 70%;
+        width: 50%;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: skewY(370deg) translate(-50%, 50%);
+        opacity: 0.5;
+        z-index: -1;
+      }
+      .back-link:link,
+      .back-link:visited {
+        text-decoration: none;
+        font-weight: 600;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: #555;
+        border: none;
+        background: #79e17b;
+        border-radius: 100px;
+        padding: 0.75rem 2rem;
+        font-weight: 1.5rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0.3%;
+        left: 2%;
+        box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.26);
+        z-index: 1000;
+      }
+      .back-link:hover,
+      .back-link:active {
+        background: #9be15d;
+      }
+      .emoji-back {
+        font-size: 1.2rem;
+      }
+      .product-image {
+        height: 25rem;
+        opacity: 0.5;
+        background-image: linear-gradient(to left bottom, #9be15d, #00e3ae);
+        overflow: hidden;
+      }
+      .foog-image {
+        font-size: 9.4rem;
+        margin-left: 2rem;
+      }
+      .image {
+        height: 20rem;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .image:hover {
+        transform: scale(1.1);
+      }
+      .product-title {
+        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.2rem;
+      }
+      .product-name {
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 500;
+        font-family: "Rubik Beastly", cursive;
+      }
+      .product-info {
+        margin-top: 1.2rem;
+      }
+      .ing-list-title,
+      .ing-analysis-title,
+      .calorie-title {
+        font-size: 2.2rem;
+        font-family: sans-serif;
+        font-weight: 400;
+        margin-left: 1.2rem;
+        text-decoration: underline;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .ingredient-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;
+        gap: 1.2rem 1.2rem;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 1.2rem;
+        margin-left: 2.4rem;
+      }
+      .ingredient-analysis,
+      .calorie-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 1.2rem;
+      }
+      .ingredient-analysis-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 2rem 8rem;
+        margin-top: 1rem;
+        padding-bottom: 2rem;
+      }
+      .analysis-ing {
+        grid-column: 1;
+        font-size: 1.2rem;
+      }
+      .analysis-perc {
+        grid-column: 2;
+        font-size: 1.2rem;
+      }
+      .calorie-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 2.4rem;
+        margin-top: 1rem;
+        margin-left: 5rem;
+        margin-bottom: 1.2rem;
+      }
+      .energy-type {
+        grid-column: 1;
+      }
+      .energy-per-kg {
+        grid-column: 2;
+      }
+      .product-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 1.2rem;
+      }
+      .description-title {
+        font-size: 1.8rem;
+        font-family: sans-serif;
+        font-weight: 400;
+        text-decoration: underline;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .description {
+        font-size: 1rem;
+        text-align: center;
+      }
+      .btn-order {
+        border-radius: 100px;
+        border: none;
+        font-size: 1.4rem;
+        background: #79e17b;
+        padding: 1rem 2rem;
+        margin-bottom: 1.2rem;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0rem 1rem 3rem 1rem rgba(0, 0, 0, 0.144);
+        margin-bottom: 3rem;
+      }
+      .btn-order:hover {
+        background: #9be15d;
+        transform: translateY(-10%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">🐶Pet Food Farm🦴</h1>
+      <figure class="product-card">
+        <a href="/" class="back-link"
+          ><span class="back-text">
+            <span class="emoji-back">👈</span> Back</span
+          >
+        </a>
+        <div class="product-image">
+          <span class="foog-image pr-image-1">{%image-front%}</span>
+          <span class="foog-image pr-image-2">{%image-front%}</span>
+          <span class="foog-image pr-image-3">{%image-front%}</span>
+          <span class="foog-image pr-image-4">{%image-front%}</span>
+          <span class="foog-image pr-image-5">{%image-front%}</span>
+          <span class="foog-image pr-image-6">{%image-front%}</span>
+          <span class="foog-image pr-image-7">{%image-front%}</span>
+        </div>
+        <div class="product-title">
+          <h2 class="product-name">{%productName%}</h2>
+        </div>
+        <div class="product-info">
+          <h4 class="ing-list-title">Ingredients</h4>
+          <ul class="ingredient-list">
+            %ingredient%
+          </ul>
+          <div class="ingredient-analysis">
+            <h4 class="ing-analysis-title">Ingredient Analysis</h4>
+            <div class="ingredient-analysis-grid">
+              <p class="analysis-ing ing-1">Crude Protein</p>
+              <p class="analysis-perc perc-1">{%crudeP%}</p>
+              <p class="analysis-ing ing-2">Crude Fat</p>
+              <p class="analysis-perc perc-2">{%crudeFa%}%</p>
+              <p class="analysis-ing ing-3">Crude Fiber</p>
+              <p class="analysis-perc perc-3">{%crudeFi%}%</p>
+              <p class="analysis-ing ing-4">Moisture</p>
+              <p class="analysis-perc perc-4">{%moisture%}%</p>
+            </div>
+          </div>
+          <div class="calorie-content">
+            <h4 class="calorie-title">Calorie Content</h4>
+            <div class="calorie-content-grid">
+              <p class="energy-type eng-type-1">Metabolizable Energy</p>
+              <p class="energy-per-kg eng-1">{%metEng%} KCAL/KG</p>
+            </div>
+          </div>
+          <div class="product-description">
+            <h4 class="description-title">Description</h4>
+            <p class="description">{%description%}</p>
+          </div>
+        </div>
+        <button class="btn-order">Order</button>
+      </figure>
+    </div>
+  </body>
+</html>

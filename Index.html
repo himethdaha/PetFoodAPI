@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https: //fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap "
+      rel=" stylesheet "
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(to bottom right, #88ca4e, #07d6a6);
+        min-height: 100vh;
+      }
+      .container {
+        width: 100rem;
+        margin: 0 auto;
+      }
+      .header {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        margin-top: 8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: 600;
+        transform: skewY(-5deg);
+        position: relative;
+        font-family: "Rubik Beastly", cursive;
+      }
+      .header::before {
+        display: block;
+        content: "";
+        background: linear-gradient(to bottom, #58a566, #09b990);
+        height: 70%;
+        width: 50%;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: skewY(370deg) translate(-50%, 50%);
+        opacity: 0.5;
+        z-index: -1;
+      }
+      .food-cards {
+        display: flex;
+        margin-top: 8rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .food-item {
+        display: flex;
+        background: #fff;
+        align-items: center;
+        transition: all 0.3s;
+        box-shadow: 0rem 3rem 10rem 2rem rgba(0, 0, 0, 0.199);
+        transform: skewX(-5deg);
+        gap: 1rem;
+        margin-bottom: 4rem;
+      }
+      .food-item:hover {
+        transform: skewX(-5deg) scale(1.05);
+      }
+      .food-image {
+        font-size: 4rem;
+        line-height: 1.2;
+        padding: 1.5rem 6rem 0.5rem 1.5rem;
+        letter-spacing: -4rem;
+        align-items: center;
+      }
+      .food-title {
+        display: flex;
+        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        padding: 1rem;
+        border-right: 1px solid rgb(207, 207, 207);
+        height: 9rem;
+        align-items: center;
+      }
+      .title {
+        font-size: 2rem;
+        font-family: "Rubik Beastly", cursive;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .food-type {
+        display: flex;
+        height: 9rem;
+        padding: 1rem;
+        border-right: 1px solid rgb(207, 207, 207);
+        align-items: center;
+      }
+      .type {
+        font-size: 1.4rem;
+        font-weight: 900;
+        font-family: sans-serif;
+        text-transform: uppercase;
+      }
+      .typeCarn {
+        background-image: linear-gradient(to right, #f03e3e, #d83838);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .typeVegan {
+        background-image: linear-gradient(to right, #226e32, #1e612b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .typeVegeterian {
+        background-image: linear-gradient(to right, #6bad78, #55a165);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .typeMix {
+        background-image: linear-gradient(to right, #b05ec4, #a64abc);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.4rem;
+      }
+      .weight,
+      .price {
+        font-size: 1.4rem;
+        font-family: sans-serif;
+        font-weight: 500;
+      }
+      .details-link:link,
+      .details-link:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-family: sans-serif;
+        background: #79e17b;
+        height: 9rem;
+        color: #fff;
+        padding: 1rem;
+        cursor: pointer;
+      }
+      .details-link:hover,
+      .details-link:active {
+        background: #9be15d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">🐶Pet Food Farm🦴</h1>
+      <div class="food-cards">{%INDEX-CARD%}</div>
+    </div>
+  </body>
+</html>
